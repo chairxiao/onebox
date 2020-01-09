@@ -17,9 +17,10 @@ module Onebox
         if match && match[:id]
           return "https://www.amazon.#{tld}/gp/aw/d/#{URI::encode(match[:id])}"
         end
-
         @url
       end
+
+    
 
       def tld
         @tld || @@matcher.match(@url)["tld"]
@@ -37,6 +38,8 @@ module Onebox
       def match
         @match ||= @url.match(/(?:d|g)p\/(?:product\/|video\/detail\/)?(?<id>[^\/]+)(?:\/|$)/mi)
       end
+
+     
 
       def image
         if (main_image = raw.css("#main-image")) && main_image.any?

@@ -40,6 +40,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'sinatra-contrib', '~> 1.4'
   spec.add_development_dependency 'haml', '~> 5.1'
   spec.add_development_dependency 'listen', '~> 2.10.0'
-
+  
   spec.required_ruby_version = '>=2.4.0'
 end
